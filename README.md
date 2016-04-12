@@ -3,6 +3,8 @@ _A/V artefakt, repozitář zdrojového kódu_
 
 [![Substance, Sny na prodej](https://j.gifs.com/qxp74y.gif)](https://vimeo.com/162558464)
 
+[video](https://vimeo.com/162558464)
+
 ##instalace
 
  * název: Substance
