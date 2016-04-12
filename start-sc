@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#export LD_LIBRARY_PATH=/home/pi/local/lib
+#export PATH=/home/pi/local/bin:${PATH}
+
+pkill jackd
+pkill scsynth
+#pkill pj
+pkill sclang
+
+jackd -P95 -d dummy &
+sleep 1
+alsa_out -q1 2>&1 > /dev/null &
+sleep 1
+(sleep 10&& jack_connect SuperCollider:out_1 alsa_out:playback_1 & jack_connect SuperCollider:out_2 alsa_out:playback_2)&
+
+sclang substance.scd &
+
